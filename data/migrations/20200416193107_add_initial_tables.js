@@ -9,7 +9,7 @@ exports.up = function (knex) {
       // Instructions table
       .createTable("instructions", (tbl) => {
         tbl.string("id", 255).primary();
-        tbl.float("step_order", 255).notNullable();
+        tbl.float("step_order").notNullable();
         tbl.string("step", 255).notNullable();
         // Foreign key (recipes)
         tbl
